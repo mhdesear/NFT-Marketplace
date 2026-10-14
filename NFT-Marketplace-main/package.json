@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "json-server": "^0.17.4",
+    "tailwindcss": "^4.3.3"
+  },
+  "name": "nft-marketplace-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "...",
+    "api": "json-server --watch ./assets/data/users.json --port 3001",
+    "tailwind": "npx @tailwindcss/cli -i ./main.css -o ./style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "prettier-plugin-tailwindcss": "^0.8.1"
+  }
+}

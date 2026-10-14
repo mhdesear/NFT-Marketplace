@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+
+    <title>NFT Marketplace</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/imgs/icons8-market-100-3.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body class="bg-background font-WorkSans text-white">
+    <header
+      class="sticky top-0 z-50 flex justify-between bg-transparent px-7.5 py-3.75 backdrop-blur-2xl md:px-12.5 xl:py-5"
+    >
+      <div class="flex items-center gap-2">
+        <img src="assets/icons/Storefront.svg" alt="Store Icon" />
+        <img
+          class="h-3.5 w-37.5 lg:w-50"
+          src="assets/icons/NFT-Marketplace.svg"
+          alt="NFT Marketplace"
+        />
+      </div>
+      <button
+        id="menu-btn"
+        class="burgerMenu mid-xl:hidden relative z-50 cursor-pointer"
+        type="button"
+        aria-label="Menu button"
+      >
+        <img
+          id="burger-icon"
+          class=""
+          src="assets/icons/Burger-Menu.svg"
+          alt="Menu button"
+        />
+        <img
+          id="close-icon"
+          class="hidden"
+          src="assets/icons/close.svg"
+          alt="close button"
+        />
+      </button>
+
+      <nav class="mid-xl:flex hidden items-center gap-2.5 font-semibold">
+        <a
+          class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+          href="../NFT-Marketplace-main/index.html"
+          >Marketplace</a
+        >
+        <a
+          class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+          href="../NFT-Marketplace-main/index.html#Rankings"
+          >Rankings</a
+        >
+        <a
+          class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+          href="../NFT-Marketplace-main/index.html#Connect-Wallet"
+          >Connect a wallet</a
+        >
+        <a
+          class="hover:bg-purple hoverCls flex gap-3 rounded-3xl px-7.5 py-5"
+          href="#"
+        >
+          <img src="assets/icons/User.svg" alt="User" />
+          <span>Sign Up</span>
+        </a>
+      </nav>
+    </header>
+
+    <nav
+      id="mobile-nav"
+      class="mid-xl:hidden bg-secondary-blur pointer-events-none fixed inset-0 z-40 flex -translate-y-10 flex-col items-center justify-center gap-6 font-semibold opacity-0 backdrop-blur-2xl"
+    >
+      <a
+        class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+        href="../NFT-Marketplace-main/index.html"
+        >Marketplace</a
+      >
+      <a
+        class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+        href="../NFT-Marketplace-main/index.html#Rankings"
+        >Rankings</a
+      >
+      <a
+        class="hover:bg-purple hoverCls rounded-3xl px-7.5 py-5"
+        href="../NFT-Marketplace-main/index.html#Connect-Wallet"
+        >Connect a wallet</a
+      >
+      <a
+        class="hover:bg-purple hoverCls flex gap-3 rounded-3xl px-7.5 py-5"
+        href="index.html"
+      >
+        <!-- <img src="assets/icons/User.svg" alt="User" /> -->
+        <span>Sign Up</span>
+      </a>
+    </nav>
+
+    <section class="grid md:grid-cols-2 md:gap-10 xl:gap-15">
+      <img
+        class="tiny:h-80 h-62 w-full overflow-clip object-cover object-center sm:h-110 md:h-full"
+        src="assets/imgs/hero.png"
+        alt="poster"
+      />
+      <div
+        class="flex flex-col gap-7.5 p-[8%] pb-[12%] text-white md:gap-10 md:py-[20%] md:pr-[18%] md:pl-0"
+      >
+        <h3 class="text-4xl font-semibold">Create Account</h3>
+        <p>
+          Welcome! enter your details and start creating, collecting and selling
+          NFTs.
+        </p>
+
+        <form
+          class="signup-form extra-tiny:items-start flex flex-col items-center gap-7.5 text-gray-950"
+        >
+          <div class="flex flex-col gap-4">
+            <div class="group relative grid gap-1.5">
+              <img
+                class="absolute top-3.75 left-5 z-10 group-focus-within:-translate-y-1"
+                src="assets/icons/GrayUser.svg"
+                alt="User Icon"
+              />
+              <label class="sr-only" for="username">username</label>
+              <input
+                class="border-gray extra-tiny:w-78 rounded-3xl border bg-white py-3 pl-13 md:w-80 xl:w-82.5"
+                type="username"
+                id="username"
+                name="username"
+                placeholder="Username"
+                required
+              />
+              <span class="validation-feedback text-sm text-purple-500"></span>
+            </div>
+
+            <div class="group relative grid gap-1.5">
+              <img
+                class="absolute top-3.75 left-5 z-10 group-focus-within:-translate-y-1"
+                src="assets/icons/EnvelopeSimple.svg"
+                alt="Envelope Icon"
+              />
+              <label class="sr-only" for="email">Email</label>
+              <input
+                class="border-gray extra-tiny:w-78 rounded-3xl border bg-white py-3 pl-13 md:w-80 xl:w-82.5"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
+              <span class="validation-feedback text-sm text-purple-500"></span>
+            </div>
+
+            <div class="group relative grid gap-1.5">
+              <img
+                class="absolute top-3.75 left-5 z-10 group-focus-within:-translate-y-1"
+                src="assets/icons/LockKey.svg"
+                alt="Lock Icon"
+              />
+              <label class="sr-only" for="password">Password</label>
+              <input
+                class="border-gray extra-tiny:w-78 rounded-3xl border bg-white py-3 pl-13 md:w-80 xl:w-82.5"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+              <span class="validation-feedback text-sm text-purple-500"></span>
+            </div>
+
+            <div class="group relative grid gap-1.5">
+              <img
+                class="absolute top-3.75 left-5 z-10 group-focus-within:-translate-y-1"
+                src="assets/icons/LockKey.svg"
+                alt="Lock Icon"
+              />
+              <label class="sr-only" for="confirmPassword"
+                >Confirm Password</label
+              >
+              <input
+                class="border-gray extra-tiny:w-78 rounded-3xl border bg-white py-3 pl-13 md:w-80 xl:w-82.5"
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+                required
+              />
+              <span class="validation-feedback text-sm text-purple-500"></span>
+            </div>
+          </div>
+
+          <button
+            class="font-WorkSans bg-purple extra-tiny:w-78 cursor-pointer rounded-3xl px-13 py-3 text-base font-semibold text-white hover:bg-purple-700 md:w-80 xl:w-82.5"
+            type="submit"
+          >
+            Create Account
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer
+      class="bg-second-background tiny:px-18 mid-xl:px-29.25 px-7.5 text-white"
+    >
+      <section
+        class="text-secondary-text grid gap-8 py-10 xl:grid-cols-[repeat(3,max-content)] xl:justify-around xl:gap-x-27.5"
+      >
+        <div class="grid gap-5">
+          <div class="flex items-center gap-2">
+            <img
+              class="w-8"
+              src="assets/icons/Storefront.svg"
+              alt="Store Icon"
+            />
+            <img
+              class="mt-1.5 w-50"
+              src="assets/icons/NFT-Marketplace.svg"
+              alt="NFT Marketplace"
+            />
+          </div>
+
+          <p class="tiny:text-base text-[15px] xl:w-59">
+            NFT marketplace UI created with Anima for Figma.
+          </p>
+
+          <p>Join our community</p>
+
+          <div class="flex gap-2.5">
+            <a
+              class="socials hover:-translate-y-1 hover:rotate-y-360"
+              href="https://discord.com/"
+              aria-label="Discord Link"
+            >
+              <img src="assets/icons/DiscordLogo.svg" alt="Discord Logo" />
+            </a>
+
+            <a
+              class="socials hover:-translate-y-1 hover:rotate-y-360"
+              href="https://youtube.com/"
+              aria-label="Youtube Link"
+            >
+              <img src="assets/icons/YoutubeLogo.svg" alt="Youtube Logo" />
+            </a>
+
+            <a
+              class="socials hover:-translate-y-1 hover:rotate-y-360"
+              href="https://x.com/"
+              aria-label="Twitter Link"
+            >
+              <img src="assets/icons/TwitterLogo.svg" alt="Twitter Logo" />
+            </a>
+
+            <a
+              class="socials hover:-translate-y-1 hover:rotate-y-360"
+              href="https://www.instagram.com/"
+              aria-label="Instagram Link"
+            >
+              <img src="assets/icons/InstagramLogo.svg" alt="Instagram Logo" />
+            </a>
+          </div>
+        </div>
+
+        <div class="grid justify-start gap-5">
+          <h5 class="font-Space-Mono text-xl font-bold text-white">Explore</h5>
+          <a
+            class="hover:text-purple link"
+            href="../NFT-Marketplace-main/index.html"
+            >Marketplace</a
+          >
+          <a
+            class="hover:text-purple link"
+            href="../NFT-Marketplace-main/index.html#Rankings"
+            >Rankings</a
+          >
+          <a
+            class="hover:text-purple link"
+            href="../NFT-Marketplace-main/index.html#Connect-Wallet"
+            >Connect a wallet</a
+          >
+        </div>
+
+        <div class="grid gap-5 md:justify-start">
+          <h5 class="font-Space-Mono text-xl font-bold text-white capitalize">
+            Join our weekly digest
+          </h5>
+          <p>Get exclusive promotions & updates straight to your inbox.</p>
+
+          <form
+            class="email-form group relative flex flex-col gap-4 text-gray-950"
+          >
+            <label class="sr-only" for="email">Email</label>
+            <input
+              class="border-gray small:border-none small:py-4.75 rounded-3xl border bg-white py-3 pl-5"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter Your Email Address"
+              required
+            />
+            <span class="email-feedback text-sm text-purple-500"></span>
+
+            <button
+              class="font-WorkSans btn bg-purple small:absolute small:w-45 small:px-12.75 small:py-4.75 right-0 flex cursor-pointer items-center justify-center gap-3 rounded-3xl px-4 py-3 text-base font-semibold text-white group-focus-within:-translate-y-1 hover:bg-purple-700"
+              type="submit"
+            >
+              <img
+                class="small:hidden"
+                src="assets/icons/EnvelopeSimple.svg"
+                alt="Envelope Icon"
+              />
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </section>
+      <div class="border-gray border-t pt-5 pb-10 text-xs xl:col-span-3">
+        Ⓒ NFT Market. Use this template freely.
+      </div>
+    </footer>
+  </body>
+</html>
