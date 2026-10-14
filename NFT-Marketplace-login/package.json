@@ -11,7 +11,8 @@
     "prettier-plugin-tailwindcss": "^0.8.1"
   },
   "scripts": {
-    "tw": "npx @tailwindcss/cli -i ./main.css -o ./style.css --watch"
+    "tw": "npx @tailwindcss/cli -i ./main.css -o ./style.css --watch",
+    "tw:compile": "npx @tailwindcss/cli -i ./main.css -o ./style.css"
   },
   "keywords": [],
   "author": "",
