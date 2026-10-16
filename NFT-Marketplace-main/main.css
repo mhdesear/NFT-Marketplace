@@ -75,7 +75,8 @@
   box-shadow: 0 2px 5px 1px #6738a5;
 }
 
-.hoverCls:hover {
+.hoverCls:hover,
+.hoverCls:active {
   box-shadow: 0 0 2px 1px var(--color-purple-light);
   @apply hover:-translate-y-1.5;
 }
