@@ -79,6 +79,7 @@
 .hoverCls:active {
   box-shadow: 0 0 2px 1px var(--color-purple-light);
   @apply hover:-translate-y-1.5;
+  @apply active:-translate-y-1.5;
 }
 
 .username,

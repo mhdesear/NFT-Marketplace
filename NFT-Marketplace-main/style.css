@@ -1310,6 +1310,10 @@
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
+  &:active {
+    --tw-translate-y: calc(var(--spacing) * -1.5);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
 }
 .username, .link:focus, .socials:focus, .burgerMenu:focus {
   box-shadow: none;

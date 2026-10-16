@@ -643,7 +643,7 @@
   padding: 20px 25px 22px;
   box-shadow: 0 2px 5px 1px #6738a5;
 }
-.hoverCls:hover, .hoverCls:hover {
+.hoverCls:hover, .hoverCls:active {
   box-shadow: 0 0 2px 1px var(--color-purple-light);
   &:hover {
     @media (hover: hover) {
@@ -656,6 +656,14 @@
       --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
+  }
+  &:active {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  &:active {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
 .link:focus, .socials:focus, .burgerMenu:focus {
