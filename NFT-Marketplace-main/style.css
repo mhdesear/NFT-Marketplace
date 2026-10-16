@@ -948,6 +948,9 @@
     .small\:hidden {
       display: none;
     }
+    .small\:h-full {
+      height: 100%;
+    }
     .small\:w-45 {
       width: calc(var(--spacing) * 45);
     }
