@@ -158,7 +158,7 @@ const renderCategory = function (category) {
           >
             <div class="relative overflow-hidden rounded-t-3xl">
               <img
-                class="w-full overflow-hidden rounded-t-3xl group-hover:blur-xs"
+                class="w-full overflow-hidden rounded-t-3xl group-hover:blur-xs "
                 src="${category.image}"
                 alt="${category.name}"
               />
