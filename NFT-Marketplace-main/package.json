@@ -10,7 +10,8 @@
   "scripts": {
     "watch": "...",
     "api": "json-server --watch ./assets/data/users.json --port 3001",
-    "tailwind": "npx @tailwindcss/cli -i ./main.css -o ./style.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i ./main.css -o ./style.css --watch",
+    "tw:compile": "npx @tailwindcss/cli -i ./main.css -o ./style.css"
   },
   "keywords": [],
   "author": "",
